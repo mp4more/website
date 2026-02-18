@@ -64,7 +64,7 @@ h4, h5 {
 }
 
 h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); line-height: 1.15; }
-h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 20px; }
 h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 h4 { font-size: 0.9375rem; }
 
@@ -1080,14 +1080,15 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .nav-toggle { display: block; }
 
-  .hero-content { padding: 100px 0 48px; }
-  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
-  .hero-desc { margin-bottom: 36px; font-size: 1rem; }
+  .hero-content { padding: 100px 0 40px; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 28px; }
+  .hero-label { display: none; }
+  .hero-desc { display: none; }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
   }
 
   .hero-actions .btn-primary,
@@ -1105,6 +1106,7 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .hero-metric { padding: 20px; }
   .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
+  .hero-metric-label { font-size: 0.75rem; }
 
   .values-grid, .grid-3, .grid-4, .steps-grid, .advantage-grid {
     grid-template-columns: 1fr;
@@ -1117,8 +1119,8 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .form-row { grid-template-columns: 1fr; }
   .page-hero { padding: 120px 0 56px; }
-  .page-hero h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); }
-  .page-hero p { font-size: 1rem; }
+  .page-hero h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); margin-bottom: 12px; }
+  .page-hero p { font-size: 0.9375rem; }
 
   .section-header { margin-bottom: 48px; }
 
@@ -1134,10 +1136,19 @@ p { font-size: 1rem; line-height: 1.75; }
 }
 
 @media (max-width: 480px) {
-  .hero-content { padding: 90px 0 32px; }
-  .hero-metric { padding: 16px; }
+  .hero-content { padding: 90px 0 28px; }
+  .hero h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+  .hero-metric { padding: 14px 16px; }
+  .hero-metric-value { font-size: 0.625rem; }
+  .hero-metric-label { font-size: 0.6875rem; }
+  .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
+  .page-hero { padding: 100px 0 44px; }
   .contact-form { padding: 20px; }
   .cta-inner .btn-dark { width: 100%; justify-content: center; }
+  .section { padding: 64px 0; }
+  .section-header { margin-bottom: 36px; }
+  .quote-block { padding: 24px; }
+  .quote-block blockquote { font-size: 1.0625rem; }
 }
 
 /* Reduced motion */
