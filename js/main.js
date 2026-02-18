@@ -158,7 +158,7 @@
       var originalHTML = submitBtn.innerHTML;
 
       submitBtn.innerHTML = 'Message Sent! &#10003;';
-      submitBtn.style.background = 'linear-gradient(135deg, #2d7a4f, #3a9d66)';
+      submitBtn.style.background = '#5ce1e6';
       submitBtn.style.color = '#fff';
       submitBtn.disabled = true;
 
