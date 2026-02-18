@@ -187,18 +187,21 @@ p { font-size: 1rem; line-height: 1.75; }
 
 /* ---------- HERO ---------- */
 .hero {
-  position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   background: linear-gradient(170deg, #1F1D20 0%, #2A2724 50%, #1F1D20 100%);
 }
 
+.hero > .container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 .hero-content {
-  position: relative;
-  z-index: 1;
   max-width: 640px;
-  padding: 160px 0 120px;
+  padding: 120px 0 60px;
 }
 
 .hero-label {
@@ -289,11 +292,6 @@ p { font-size: 1rem; line-height: 1.75; }
 
 /* Hero metrics bar */
 .hero-metrics {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
   border-top: 1px solid var(--border-dark);
 }
 
@@ -1017,18 +1015,7 @@ p { font-size: 1rem; line-height: 1.75; }
   .values-grid, .steps-grid { grid-template-columns: 1fr 1fr; }
   .grid-3, .advantage-grid { grid-template-columns: 1fr 1fr; }
 
-  .hero {
-    display: block;
-    min-height: 0;
-  }
-
-  .hero-content {
-    padding: 140px 0 60px;
-  }
-
-  .hero-metrics {
-    position: static;
-  }
+  .hero { min-height: auto; }
 
   .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
   .hero-metric:nth-child(2) { border-right: none; }
@@ -1093,10 +1080,7 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .nav-toggle { display: block; }
 
-  .hero-content {
-    padding: 120px 0 48px;
-  }
-
+  .hero-content { padding: 100px 0 48px; }
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-desc { margin-bottom: 36px; font-size: 1rem; }
 
@@ -1106,21 +1090,21 @@ p { font-size: 1rem; line-height: 1.75; }
     gap: 12px;
   }
 
-  .hero-actions .btn-primary {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 28px;
-  }
-
+  .hero-actions .btn-primary,
   .hero-actions .btn-ghost {
     width: 100%;
     justify-content: center;
-    padding: 14px 20px;
-    border: 1px solid rgba(250, 247, 242, 0.15);
+    padding: 14px 28px;
     border-radius: 4px;
+    text-align: center;
+  }
+
+  .hero-actions .btn-ghost {
+    border: 1px solid rgba(250, 247, 242, 0.15);
   }
 
   .hero-metric { padding: 20px; }
+  .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
 
   .values-grid, .grid-3, .grid-4, .steps-grid, .advantage-grid {
     grid-template-columns: 1fr;
@@ -1150,7 +1134,7 @@ p { font-size: 1rem; line-height: 1.75; }
 }
 
 @media (max-width: 480px) {
-  .hero-content { padding: 100px 0 36px; }
+  .hero-content { padding: 90px 0 32px; }
   .hero-metric { padding: 16px; }
   .contact-form { padding: 20px; }
   .cta-inner .btn-dark { width: 100%; justify-content: center; }
