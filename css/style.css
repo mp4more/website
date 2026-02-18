@@ -189,19 +189,13 @@ p { font-size: 1rem; line-height: 1.75; }
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  background: linear-gradient(170deg, #1F1D20 0%, #2A2724 50%, #1F1D20 100%);
-}
-
-.hero > .container {
-  flex: 1;
-  display: flex;
   align-items: center;
+  background: linear-gradient(170deg, #1F1D20 0%, #2A2724 50%, #1F1D20 100%);
 }
 
 .hero-content {
   max-width: 640px;
-  padding: 120px 0 60px;
+  padding: 60px 0;
 }
 
 .hero-label {
@@ -290,37 +284,6 @@ p { font-size: 1rem; line-height: 1.75; }
 
 .btn-arrow:hover::after { transform: translateX(4px); }
 
-/* Hero metrics bar */
-.hero-metrics {
-  border-top: 1px solid var(--border-dark);
-}
-
-.hero-metrics-inner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.hero-metric {
-  padding: 28px 32px;
-  border-right: 1px solid var(--border-dark);
-}
-
-.hero-metric:last-child { border-right: none; }
-
-.hero-metric-value {
-  font-family: var(--sans);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: var(--text-on-dark-secondary);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-
-.hero-metric-label {
-  font-size: 0.8125rem;
-  color: rgba(250, 247, 242, 0.3);
-}
 
 /* ---------- SECTIONS ---------- */
 .section {
@@ -1017,9 +980,6 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .hero { min-height: auto; }
 
-  .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
-  .hero-metric:nth-child(2) { border-right: none; }
-
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
   .cta-inner { flex-direction: column; text-align: center; }
 }
@@ -1080,7 +1040,8 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .nav-toggle { display: block; }
 
-  .hero-content { padding: 100px 0 40px; }
+  .hero { min-height: 100vh; padding: 80px 0 40px; }
+  .hero-content { padding: 0; }
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 28px; }
   .hero-label { display: none; }
   .hero-desc { display: none; }
@@ -1103,10 +1064,6 @@ p { font-size: 1rem; line-height: 1.75; }
   .hero-actions .btn-ghost {
     border: 1px solid rgba(250, 247, 242, 0.15);
   }
-
-  .hero-metric { padding: 20px; }
-  .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
-  .hero-metric-label { font-size: 0.75rem; }
 
   .values-grid, .grid-3, .grid-4, .steps-grid, .advantage-grid {
     grid-template-columns: 1fr;
@@ -1136,12 +1093,7 @@ p { font-size: 1rem; line-height: 1.75; }
 }
 
 @media (max-width: 480px) {
-  .hero-content { padding: 90px 0 28px; }
   .hero h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
-  .hero-metric { padding: 14px 16px; }
-  .hero-metric-value { font-size: 0.625rem; }
-  .hero-metric-label { font-size: 0.6875rem; }
-  .hero-metrics-inner { grid-template-columns: 1fr 1fr; }
   .page-hero { padding: 100px 0 44px; }
   .contact-form { padding: 20px; }
   .cta-inner .btn-dark { width: 100%; justify-content: center; }
