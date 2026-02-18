@@ -217,14 +217,7 @@ p { font-size: 1rem; line-height: 1.75; }
   font-size: 1.0625rem;
   color: var(--text-on-dark-secondary);
   line-height: 1.8;
-  margin-bottom: 48px;
   max-width: 520px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  align-items: center;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -240,23 +233,6 @@ p { font-size: 1rem; line-height: 1.75; }
   cursor: pointer;
   transition: all 0.3s var(--ease);
 }
-
-.btn-primary {
-  background: var(--text-on-dark);
-  color: var(--text);
-  padding: 13px 28px;
-  border-radius: 4px;
-}
-
-.btn-primary:hover { opacity: 0.9; }
-
-.btn-ghost {
-  background: transparent;
-  color: var(--text-on-dark-secondary);
-  padding: 13px 20px;
-}
-
-.btn-ghost:hover { color: var(--text-on-dark); }
 
 .btn-dark {
   background: var(--text);
@@ -1042,28 +1018,9 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .hero { min-height: 100vh; padding: 80px 0 40px; }
   .hero-content { padding: 0; }
-  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 28px; }
-  .hero-label { display: none; }
-  .hero-desc { display: none; }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .hero-actions .btn-primary,
-  .hero-actions .btn-ghost {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 28px;
-    border-radius: 4px;
-    text-align: center;
-  }
-
-  .hero-actions .btn-ghost {
-    border: 1px solid rgba(250, 247, 242, 0.15);
-  }
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-label { margin-bottom: 20px; }
+  .hero-desc { font-size: 1rem; line-height: 1.75; }
 
   .values-grid, .grid-3, .grid-4, .steps-grid, .advantage-grid {
     grid-template-columns: 1fr;
