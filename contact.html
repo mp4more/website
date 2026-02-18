@@ -13,22 +13,22 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <nav class="nav" id="nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-text">4 <span>MORE</span></span>
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="advisory.html">Advisory</a>
-        <a href="investment.html">Investment</a>
-        <a href="contact.html" class="btn btn-primary nav-cta active">Contact Us</a>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">4 <span>MORE</span></a>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="investment.html">Investment</a>
+          <a href="contact.html" class="nav-cta btn btn-dark active">Contact Us</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </nav>
 
@@ -42,7 +42,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact-section section">
+  <section class="section">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
@@ -51,38 +51,17 @@
           <p class="reveal">Reach out to discuss your strategic needs. We respond to all enquiries promptly and treat every conversation with the utmost confidentiality.</p>
 
           <div class="contact-details">
-            <div class="contact-detail reveal reveal-delay-1">
-              <div class="contact-detail-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                </svg>
-              </div>
-              <div>
-                <h4>Company</h4>
-                <p>PP Advisory Limited<br>trading as 4 MORE Capital Partners</p>
-              </div>
+            <div class="contact-detail reveal reveal-d1">
+              <div class="contact-detail-label">Company</div>
+              <p>PP Advisory Limited<br>trading as 4 MORE Capital Partners</p>
             </div>
-            <div class="contact-detail reveal reveal-delay-2">
-              <div class="contact-detail-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                </svg>
-              </div>
-              <div>
-                <h4>Registration</h4>
-                <p>Registered in England and Wales<br>Company #13545208</p>
-              </div>
+            <div class="contact-detail reveal reveal-d2">
+              <div class="contact-detail-label">Registration</div>
+              <p>Registered in England and Wales<br>Company #13545208</p>
             </div>
-            <div class="contact-detail reveal reveal-delay-3">
-              <div class="contact-detail-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                </svg>
-              </div>
-              <div>
-                <h4>Markets</h4>
-                <p>Germany &bull; Austria &bull; Switzerland &bull; United Kingdom</p>
-              </div>
+            <div class="contact-detail reveal reveal-d3">
+              <div class="contact-detail-label">Markets</div>
+              <p>Germany &bull; Austria &bull; Switzerland &bull; United Kingdom</p>
             </div>
           </div>
         </div>
@@ -124,7 +103,7 @@
               <label for="message">Your Message</label>
               <textarea id="message" name="message" placeholder="Tell us about your project or enquiry..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary form-submit btn-arrow">Send Message</button>
+            <button type="submit" class="btn btn-dark form-submit btn-arrow">Send Message</button>
           </form>
         </div>
       </div>
@@ -135,21 +114,21 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="nav-logo-text">4 <span>MORE</span></span>
-          <p>Specialising in navigating complex corporate and real estate challenges, offering strategic advisory and hands-on asset management.</p>
+        <div>
+          <div class="footer-logo">4 <span>MORE</span></div>
+          <p class="footer-desc">Specialising in navigating complex corporate and real estate challenges, offering strategic advisory and hands-on asset management.</p>
         </div>
-        <div class="footer-column">
+        <div class="footer-col">
           <h4>Services</h4>
           <a href="advisory.html">Advisory</a>
           <a href="investment.html">Investment</a>
         </div>
-        <div class="footer-column">
+        <div class="footer-col">
           <h4>Company</h4>
           <a href="index.html">Home</a>
           <a href="contact.html">Contact</a>
         </div>
-        <div class="footer-column">
+        <div class="footer-col">
           <h4>Legal</h4>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
