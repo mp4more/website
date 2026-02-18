@@ -1,6 +1,6 @@
 /* ========================================
    4 MORE Capital Partners - Main JavaScript
-   Navbar · Mobile Nav · Scroll Reveal · Form
+   Navbar · Mobile Nav · Scroll Reveal · Interactions
    ======================================== */
 
 (function () {
@@ -32,12 +32,22 @@
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
 
+    // Close mobile nav when a link is clicked
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navToggle.classList.remove('active');
         navLinks.classList.remove('open');
         document.body.style.overflow = '';
       });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
     });
   }
 
@@ -53,8 +63,8 @@
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -60px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     revealElements.forEach(function (el) {
@@ -65,6 +75,43 @@
     revealElements.forEach(function (el) {
       el.classList.add('visible');
     });
+  }
+
+  // ---------- Hero Metrics Entrance Animation ----------
+  var heroMetrics = document.querySelector('.hero-metrics');
+
+  if (heroMetrics && 'IntersectionObserver' in window) {
+    var metrics = heroMetrics.querySelectorAll('.hero-metric');
+
+    metrics.forEach(function (metric, index) {
+      metric.style.opacity = '0';
+      metric.style.transform = 'translateY(16px)';
+      metric.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      metric.style.transitionDelay = (0.6 + index * 0.1) + 's';
+    });
+
+    // Trigger after page loads
+    window.addEventListener('load', function () {
+      metrics.forEach(function (metric) {
+        metric.style.opacity = '1';
+        metric.style.transform = 'translateY(0)';
+      });
+    });
+  }
+
+  // ---------- Smooth Parallax on Hero (subtle) ----------
+  var heroContent = document.querySelector('.hero-content');
+
+  if (heroContent && window.innerWidth > 768) {
+    window.addEventListener('scroll', function () {
+      var scrolled = window.scrollY;
+      if (scrolled < window.innerHeight) {
+        var opacity = 1 - (scrolled / window.innerHeight) * 0.6;
+        var translate = scrolled * 0.15;
+        heroContent.style.transform = 'translateY(' + translate + 'px)';
+        heroContent.style.opacity = opacity;
+      }
+    }, { passive: true });
   }
 
   // ---------- Contact Form ----------
@@ -78,7 +125,7 @@
       var originalHTML = submitBtn.innerHTML;
 
       submitBtn.innerHTML = 'Message Sent &#10003;';
-      submitBtn.style.background = 'var(--gray-700)';
+      submitBtn.style.background = '#16a34a';
       submitBtn.disabled = true;
 
       setTimeout(function () {
@@ -93,7 +140,9 @@
   // ---------- Smooth scroll for anchor links ----------
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      var target = document.querySelector(this.getAttribute('href'));
+      var href = this.getAttribute('href');
+      if (href === '#') return;
+      var target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
