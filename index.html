@@ -12,6 +12,12 @@
 </head>
 <body>
 
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Cursor Glow (desktop only) -->
+  <div class="cursor-glow"></div>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="container">
@@ -35,10 +41,23 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg"></div>
+    <!-- Floating particles -->
+    <div class="hero-particles">
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    </div>
+    <!-- Mouse-following spotlight -->
+    <div class="hero-spotlight"></div>
     <div class="container">
       <div class="hero-content">
         <span class="hero-label">Strategic Advisory &amp; Investment</span>
-        <h1>Navigating Complex Challenges, Unlocking Value</h1>
+        <h1>Navigating Complex Challenges, <span class="text-shimmer">Unlocking Value</span></h1>
         <p class="hero-desc">4 MORE Capital Partners specialises in navigating complex corporate and real estate challenges, offering strategic advisory and hands-on asset management to deliver targeted solutions.</p>
         <div class="hero-actions">
           <a href="advisory.html" class="btn btn-white btn-arrow">Our Services</a>
@@ -102,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="quote-block reveal">
+        <div class="quote-block reveal-scale">
           <blockquote>&ldquo;We navigate turnaround challenges by analysing data, setting goals, and executing decisions through effective process management and communication, always keeping our partners&rsquo; interests in mind.&rdquo;</blockquote>
           <cite>Patrick Pfeiffer, Founder &amp; Managing Partner</cite>
         </div>
@@ -119,19 +138,19 @@
         <p class="reveal">Four core principles guide our approach to every engagement, ensuring consistency, integrity, and exceptional results for our partners.</p>
       </div>
       <div class="values-grid reveal">
-        <div class="value-item">
+        <div class="value-item" data-index="01">
           <h3>Ownership</h3>
           <p>We make confident decisions with a long-term focus, taking full responsibility for outcomes and treating every engagement as if it were our own.</p>
         </div>
-        <div class="value-item">
+        <div class="value-item" data-index="02">
           <h3>Innovation</h3>
           <p>We solve complex problems through digitalisation and technology adoption, constantly seeking smarter ways to create and preserve value.</p>
         </div>
-        <div class="value-item">
+        <div class="value-item" data-index="03">
           <h3>Transparency</h3>
           <p>We maintain clear communication and fair dealings throughout every engagement, building trust through openness and honesty.</p>
         </div>
-        <div class="value-item">
+        <div class="value-item" data-index="04">
           <h3>Results</h3>
           <p>We deliver creative solutions that exceed expectations, focusing on measurable outcomes and tangible value creation for our partners.</p>
         </div>
@@ -147,7 +166,7 @@
         <h2 class="reveal">Two Pillars of Expertise</h2>
         <p class="reveal">Whether through strategic advisory or direct investment, we bring the same rigour, creativity, and commitment to every engagement.</p>
       </div>
-      <div class="services-duo reveal">
+      <div class="services-duo reveal-scale">
         <div class="service-block">
           <div class="service-block-label">01</div>
           <h3>Advisory</h3>
