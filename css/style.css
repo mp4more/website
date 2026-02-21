@@ -234,88 +234,68 @@ p { font-size: 1rem; line-height: 1.75; }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* ========== HERO ========== */
+/* ========== HERO (full-bleed background) ========== */
 .hero {
-  padding: 100px 0 120px;
   position: relative;
+  padding: 160px 0 180px;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+/* Background layer — edge to edge SVG or future photo */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Dark overlay for text readability */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    110deg,
+    rgba(26, 23, 20, 0.72) 0%,
+    rgba(26, 23, 20, 0.55) 50%,
+    rgba(26, 23, 20, 0.35) 100%
+  );
+}
+
+/* Content above the background */
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 640px;
 }
 
 .hero .label {
   margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .hero h1 {
   margin-bottom: 32px;
+  color: var(--white);
 }
 
 .hero-desc {
   font-size: 1.125rem;
-  color: var(--text-body);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
-  max-width: 560px;
-}
-
-/* Split hero */
-.hero-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.hero-image-wrap {
-  position: relative;
-}
-
-.hero-image-placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-/* When a real image is used */
-.hero-image-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SVG cityscape illustration */
-.hero-cityscape {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* Warm photographic overlay on the illustration */
-.hero-image-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(44, 40, 36, 0.08) 0%,
-    rgba(140, 123, 94, 0.06) 50%,
-    rgba(44, 40, 36, 0.12) 100%
-  );
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-
-/* Fallback icon for other pages' placeholders */
-.hero-image-placeholder svg:not(.hero-cityscape) {
-  width: 48px;
-  height: 48px;
-  stroke: var(--warm-gray);
+  max-width: 520px;
 }
 
 /* ========== BUTTONS ========== */
@@ -1076,8 +1056,7 @@ p { font-size: 1rem; line-height: 1.75; }
   .section { padding: 100px 0; }
   .section-sm { padding: 80px 0; }
 
-  .hero-split { grid-template-columns: 1fr; gap: 48px; }
-  .hero { padding: 80px 0 100px; }
+  .hero { padding: 120px 0 140px; min-height: 440px; }
 
   .grid-2, .contact-grid, .acquisition-grid, .section-header-split {
     grid-template-columns: 1fr;
@@ -1162,7 +1141,7 @@ p { font-size: 1rem; line-height: 1.75; }
   .nav-toggle.active span { background: var(--text-on-dark); }
 
   /* Layout */
-  .hero { padding: 60px 0 80px; }
+  .hero { padding: 80px 0 100px; min-height: 380px; }
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-desc { font-size: 1rem; }
 
