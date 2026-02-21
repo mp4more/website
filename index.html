@@ -52,8 +52,126 @@
         </div>
         <div class="hero-image-wrap reveal">
           <div class="hero-image-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
+            <!-- Cityscape SVG — replace this entire div with <img> when real photo is ready -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" class="hero-cityscape">
+              <!-- Sky gradient -->
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#C8C3BA"/>
+                  <stop offset="60%" stop-color="#D8D4CC"/>
+                  <stop offset="100%" stop-color="#E5E1DA"/>
+                </linearGradient>
+                <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#A8A39A"/>
+                  <stop offset="100%" stop-color="#8E897F"/>
+                </linearGradient>
+                <linearGradient id="glass2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#9B968D"/>
+                  <stop offset="100%" stop-color="#7D786F"/>
+                </linearGradient>
+                <linearGradient id="glass3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#B5B0A7"/>
+                  <stop offset="100%" stop-color="#9A958C"/>
+                </linearGradient>
+              </defs>
+              <!-- Sky -->
+              <rect width="800" height="600" fill="url(#sky)"/>
+              <!-- Distant buildings -->
+              <rect x="0" y="340" width="800" height="260" fill="#C2BDB4"/>
+              <rect x="40" y="280" width="60" height="320" fill="#B8B3AA"/>
+              <rect x="110" y="300" width="45" height="300" fill="#BDB8AF"/>
+              <rect x="170" y="260" width="80" height="340" fill="url(#glass3)"/>
+              <!-- Main tower (left-center) -->
+              <rect x="280" y="120" width="100" height="480" fill="url(#glass)"/>
+              <rect x="282" y="122" width="96" height="476" fill="url(#glass)" opacity="0.6"/>
+              <!-- Tower windows -->
+              <g fill="#C2BDB4" opacity="0.5">
+                <rect x="290" y="140" width="18" height="8" rx="0"/>
+                <rect x="315" y="140" width="18" height="8"/>
+                <rect x="340" y="140" width="18" height="8"/>
+                <rect x="365" y="140" width="8" height="8"/>
+                <rect x="290" y="160" width="18" height="8"/>
+                <rect x="315" y="160" width="18" height="8"/>
+                <rect x="340" y="160" width="18" height="8"/>
+                <rect x="365" y="160" width="8" height="8"/>
+                <rect x="290" y="180" width="18" height="8"/>
+                <rect x="315" y="180" width="18" height="8"/>
+                <rect x="340" y="180" width="18" height="8"/>
+                <rect x="290" y="200" width="18" height="8"/>
+                <rect x="315" y="200" width="18" height="8"/>
+                <rect x="340" y="200" width="18" height="8"/>
+                <rect x="290" y="220" width="18" height="8"/>
+                <rect x="315" y="220" width="18" height="8"/>
+                <rect x="340" y="220" width="18" height="8"/>
+                <rect x="290" y="240" width="18" height="8"/>
+                <rect x="315" y="240" width="18" height="8"/>
+                <rect x="340" y="240" width="18" height="8"/>
+                <rect x="290" y="260" width="18" height="8"/>
+                <rect x="315" y="260" width="18" height="8"/>
+                <rect x="290" y="280" width="18" height="8"/>
+                <rect x="315" y="280" width="18" height="8"/>
+                <rect x="340" y="280" width="18" height="8"/>
+                <rect x="290" y="300" width="18" height="8"/>
+                <rect x="315" y="300" width="18" height="8"/>
+                <rect x="340" y="300" width="18" height="8"/>
+              </g>
+              <!-- Mid building -->
+              <rect x="395" y="200" width="120" height="400" fill="url(#glass2)"/>
+              <!-- Mid building windows -->
+              <g fill="#A8A39A" opacity="0.4">
+                <rect x="405" y="220" width="22" height="10"/>
+                <rect x="435" y="220" width="22" height="10"/>
+                <rect x="465" y="220" width="22" height="10"/>
+                <rect x="495" y="220" width="12" height="10"/>
+                <rect x="405" y="245" width="22" height="10"/>
+                <rect x="435" y="245" width="22" height="10"/>
+                <rect x="465" y="245" width="22" height="10"/>
+                <rect x="405" y="270" width="22" height="10"/>
+                <rect x="435" y="270" width="22" height="10"/>
+                <rect x="465" y="270" width="22" height="10"/>
+                <rect x="405" y="295" width="22" height="10"/>
+                <rect x="435" y="295" width="22" height="10"/>
+                <rect x="465" y="295" width="22" height="10"/>
+                <rect x="405" y="320" width="22" height="10"/>
+                <rect x="435" y="320" width="22" height="10"/>
+                <rect x="465" y="320" width="22" height="10"/>
+                <rect x="405" y="345" width="22" height="10"/>
+                <rect x="435" y="345" width="22" height="10"/>
+              </g>
+              <!-- Right tower -->
+              <rect x="530" y="160" width="90" height="440" fill="#A19C93"/>
+              <!-- Right tower windows -->
+              <g fill="#B5B0A7" opacity="0.4">
+                <rect x="540" y="180" width="16" height="8"/>
+                <rect x="562" y="180" width="16" height="8"/>
+                <rect x="584" y="180" width="16" height="8"/>
+                <rect x="606" y="180" width="8" height="8"/>
+                <rect x="540" y="200" width="16" height="8"/>
+                <rect x="562" y="200" width="16" height="8"/>
+                <rect x="584" y="200" width="16" height="8"/>
+                <rect x="540" y="220" width="16" height="8"/>
+                <rect x="562" y="220" width="16" height="8"/>
+                <rect x="584" y="220" width="16" height="8"/>
+                <rect x="540" y="240" width="16" height="8"/>
+                <rect x="562" y="240" width="16" height="8"/>
+                <rect x="584" y="240" width="16" height="8"/>
+                <rect x="540" y="260" width="16" height="8"/>
+                <rect x="562" y="260" width="16" height="8"/>
+                <rect x="540" y="280" width="16" height="8"/>
+                <rect x="562" y="280" width="16" height="8"/>
+                <rect x="584" y="280" width="16" height="8"/>
+              </g>
+              <!-- Far right buildings -->
+              <rect x="635" y="250" width="70" height="350" fill="#B0ABA2"/>
+              <rect x="715" y="290" width="85" height="310" fill="#BAB5AC"/>
+              <!-- Foreground base / street level -->
+              <rect x="0" y="520" width="800" height="80" fill="#B5B0A7"/>
+              <!-- Subtle light reflection on main tower -->
+              <rect x="282" y="120" width="3" height="480" fill="#D0CBC3" opacity="0.4"/>
+              <rect x="395" y="200" width="2" height="400" fill="#C5C0B7" opacity="0.3"/>
+              <rect x="530" y="160" width="2" height="440" fill="#C8C3BA" opacity="0.3"/>
+              <!-- Atmospheric haze at bottom -->
+              <rect x="0" y="450" width="800" height="150" fill="url(#sky)" opacity="0.15"/>
             </svg>
           </div>
         </div>
