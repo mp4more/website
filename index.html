@@ -12,17 +12,22 @@
 </head>
 <body>
 
+  <!-- Centered Logo -->
+  <div class="top-bar">
+    <a href="index.html" class="top-bar-logo-text">4 <span>MORE</span></a>
+  </div>
+
+  <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="container">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">4 <span>MORE</span></a>
         <div class="nav-links" id="navLinks">
           <a href="index.html" class="active">Home</a>
           <a href="advisory.html">Advisory</a>
           <a href="investment.html">Investment</a>
           <a href="portfolio.html">Portfolio</a>
           <a href="acquisition.html">Acquisition</a>
-          <a href="contact.html" class="nav-cta">Contact Us</a>
+          <a href="contact.html">Contact</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
           <span></span>
@@ -38,51 +43,57 @@
     <div class="container">
       <div class="hero-split">
         <div class="hero-content">
-          <span class="hero-label">Strategic Advisory &amp; Investment</span>
-          <h1>Who we are</h1>
-          <p class="hero-desc">4 MORE Capital Partners specialises in navigating complex corporate and real estate challenges, delivering strategic advisory and hands-on asset management.</p>
-          <a href="contact.html" class="btn btn-pill btn-arrow">contact us</a>
+          <span class="label reveal">Strategic Advisory &amp; Investment</span>
+          <h1 class="reveal">Who we are</h1>
+          <p class="hero-desc reveal">4 MORE Capital Partners specialises in navigating complex corporate and real estate challenges, delivering strategic advisory and hands-on asset management.</p>
+          <div class="reveal" style="margin-top: 40px;">
+            <a href="contact.html" class="btn btn-primary btn-arrow">Contact Us</a>
+          </div>
         </div>
-        <div class="hero-image-placeholder">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
-          </svg>
+        <div class="hero-image-wrap reveal">
+          <div class="hero-image-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- What We Do -->
-  <section class="section">
+  <section class="section-sm" style="border-top: 1px solid rgba(0,0,0,0.08);">
     <div class="container">
       <div class="section-header section-header-center reveal">
+        <span class="label">Services</span>
         <h2>What we do</h2>
         <p>Tailored solutions across asset management and investment, from acquisition to exit.</p>
       </div>
       <div class="services-duo reveal">
         <div class="service-block">
-          <div class="service-block-label">Advisory</div>
+          <span class="label">Advisory</span>
           <p>Hands-on execution of complex business plans, asset turnarounds, and institutional-grade project delivery.</p>
-          <a href="advisory.html" class="btn btn-pill btn-arrow">Learn more</a>
+          <a href="advisory.html" class="btn btn-text btn-arrow">Learn More</a>
         </div>
         <div class="service-block">
-          <div class="service-block-label">Investment</div>
+          <span class="label">Investment</span>
           <p>Focused on Germany, Austria, and the UK &mdash; sourcing, structuring, and executing deals with a shared-investment approach.</p>
-          <a href="investment.html" class="btn btn-pill btn-arrow">Learn more</a>
+          <a href="investment.html" class="btn btn-text btn-arrow">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Principles -->
-  <section class="section section-dark">
+  <section class="section-dark section-sm">
     <div class="container">
-      <div class="principles-header reveal">
+      <div class="section-header-split reveal">
         <div>
-          <h2>Our Principles</h2>
+          <span class="label">Our Values</span>
+          <h2>Principles</h2>
         </div>
         <div>
-          <p>A work culture centered on transparency, ownership, and results &mdash; underpinning our approach to innovation.</p>
+          <p>A work culture centred on transparency, ownership, and results &mdash; underpinning our approach to every engagement.</p>
         </div>
       </div>
       <div class="principles-grid reveal">
@@ -93,7 +104,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <span>Transparency</span>
+          <h4>Transparency</h4>
         </div>
         <div class="principle-item">
           <div class="principle-icon">
@@ -101,7 +112,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
             </svg>
           </div>
-          <span>Ownership</span>
+          <h4>Ownership</h4>
         </div>
         <div class="principle-item">
           <div class="principle-icon">
@@ -109,7 +120,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
             </svg>
           </div>
-          <span>Results</span>
+          <h4>Results</h4>
         </div>
         <div class="principle-item">
           <div class="principle-icon">
@@ -117,19 +128,18 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
             </svg>
           </div>
-          <span>Innovation</span>
+          <h4>Innovation</h4>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Quote -->
-  <section class="quote-strip">
+  <section class="editorial-break">
     <div class="container">
-      <div class="quote-strip-inner reveal">
+      <div class="editorial-break-inner reveal">
         <blockquote>&ldquo;4 MORE&rsquo;s edge for sophisticated investors lies in its deep curiosity and contrarian approach to problem-solving, constantly seeking new solutions and capitalising on secular demand drivers.&rdquo;</blockquote>
-        <div class="divider"></div>
-        <a href="contact.html" class="btn btn-link btn-arrow">contact us</a>
+        <cite>4 MORE Capital Partners</cite>
       </div>
     </div>
   </section>
@@ -138,68 +148,63 @@
   <section class="section">
     <div class="container">
       <div class="section-header section-header-center">
+        <span class="label reveal">Our People</span>
         <h2 class="reveal">Team</h2>
       </div>
-      <div class="team-cards">
-        <div class="team-card reveal reveal-d1">
-          <div class="team-card-photo">
+      <div class="team-grid">
+        <div class="team-member reveal reveal-d1">
+          <div class="team-photo">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
           </div>
-          <div class="team-card-info">
-            <h4>Patrick Pfeiffer</h4>
-            <p class="team-card-title">Founder, Managing Partner</p>
-            <p>International investment expertise, specialising in value creation, turnarounds, and contrarian strategies across Western Europe.</p>
-          </div>
+          <h4>Patrick Pfeiffer</h4>
+          <p class="team-title">Founder, Managing Partner</p>
+          <p>International investment expertise, specialising in value creation, turnarounds, and contrarian strategies across Western Europe.</p>
         </div>
-        <div class="team-card reveal reveal-d2">
-          <div class="team-card-photo">
+        <div class="team-member reveal reveal-d2">
+          <div class="team-photo">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
           </div>
-          <div class="team-card-info">
-            <h4>Ina Sparta</h4>
-            <p class="team-card-title">Title TBD</p>
-            <p>Bio placeholder &mdash; to be updated with role description and background.</p>
-          </div>
+          <h4>Ina Sparta</h4>
+          <p class="team-title">Title TBD</p>
+          <p>Bio placeholder &mdash; to be updated with role description and background.</p>
         </div>
-        <div class="team-card reveal reveal-d3">
-          <div class="team-card-photo">
+        <div class="team-member reveal reveal-d3">
+          <div class="team-photo">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
           </div>
-          <div class="team-card-info">
-            <h4>Advisor</h4>
-            <p class="team-card-title">Berater</p>
-            <p>Advisor bio placeholder &mdash; expertise and background to be added.</p>
-          </div>
+          <h4>Advisor</h4>
+          <p class="team-title">Berater</p>
+          <p>Advisor bio placeholder &mdash; expertise and background to be added.</p>
         </div>
-        <div class="team-card reveal reveal-d4">
-          <div class="team-card-photo">
+        <div class="team-member reveal reveal-d4">
+          <div class="team-photo">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
           </div>
-          <div class="team-card-info">
-            <h4>Advisor</h4>
-            <p class="team-card-title">Berater</p>
-            <p>Advisor bio placeholder &mdash; expertise and background to be added.</p>
-          </div>
+          <h4>Advisor</h4>
+          <p class="team-title">Berater</p>
+          <p>Advisor bio placeholder &mdash; expertise and background to be added.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- A word from Patrick -->
-  <section class="cta-section">
+  <!-- CTA -->
+  <section class="cta-strip">
     <div class="container">
-      <div class="cta-inner reveal">
-        <h2>A word from Patrick Pfeiffer</h2>
-        <p>4 MORE navigates turnaround challenges by analysing data, setting goals, and executing with precision &mdash; always keeping our partners&rsquo; interests in mind.</p>
-        <a href="contact.html" class="btn btn-pill btn-arrow" style="margin-top: 12px;">contact us</a>
+      <div class="cta-strip-inner reveal">
+        <div>
+          <h2>A word from Patrick Pfeiffer</h2>
+          <p>4 MORE navigates turnaround challenges by analysing data, setting goals, and executing with precision &mdash; always keeping our partners&rsquo; interests in mind.</p>
+        </div>
+        <a href="contact.html" class="btn btn-white btn-arrow">Contact Us</a>
       </div>
     </div>
   </section>
@@ -214,7 +219,7 @@
           <a href="investment.html">Investment</a>
           <a href="portfolio.html">Portfolio</a>
           <a href="#">Blog</a>
-          <a href="contact.html">Contact Us</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">

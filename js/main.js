@@ -1,6 +1,6 @@
 /* ========================================
    4 MORE Capital Partners
-   Navbar · Mobile Nav · Scroll Reveal
+   Navigation · Mobile · Scroll Reveal
    ======================================== */
 
 (function () {
@@ -11,7 +11,7 @@
 
   function handleNavScroll() {
     if (!nav) return;
-    if (window.scrollY > 50) {
+    if (window.scrollY > 20) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
@@ -49,7 +49,7 @@
     });
   }
 
-  // Scroll reveal
+  // Scroll reveal (IntersectionObserver)
   var revealElements = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window) {
