@@ -11,8 +11,8 @@
   --warm-gray: #D4D0C8;
   --mid-gray: #9B978F;
   --dark-gray: #5C584F;
-  --charcoal: #2C2824;
-  --black: #1A1714;
+  --charcoal: #0f5f64;
+  --black: #0a4a4e;
 
   /* Accent — subtle, warm */
   --accent: #8C7B5E;
@@ -265,9 +265,9 @@ p { font-size: 1rem; line-height: 1.75; }
   z-index: 1;
   background: linear-gradient(
     110deg,
-    rgba(26, 23, 20, 0.72) 0%,
-    rgba(26, 23, 20, 0.55) 50%,
-    rgba(26, 23, 20, 0.35) 100%
+    rgba(15, 95, 100, 0.78) 0%,
+    rgba(15, 95, 100, 0.6) 50%,
+    rgba(15, 95, 100, 0.4) 100%
   );
 }
 
