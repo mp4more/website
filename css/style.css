@@ -237,18 +237,22 @@ p { font-size: 1rem; line-height: 1.75; }
 /* ========== HERO (full-bleed background) ========== */
 .hero {
   position: relative;
-  padding: 160px 0 180px;
   overflow: hidden;
-  min-height: 520px;
   display: flex;
   align-items: center;
+  /* Fill viewport minus top-bar (~80px) and nav (~53px) */
+  min-height: calc(100vh - 133px);
+  min-height: calc(100svh - 133px);
+  padding: 80px 0 120px;
 }
 
 /* Background layer — edge to edge SVG or future photo */
 .hero-bg {
   position: absolute;
-  inset: 0;
+  inset: -20% 0 0 0; /* extra height above for parallax travel room */
   z-index: 0;
+  will-change: transform;
+  transition: none;
 }
 
 .hero-bg svg {
@@ -271,10 +275,24 @@ p { font-size: 1rem; line-height: 1.75; }
   );
 }
 
+/* Soft fade at bottom edge — blends into next section */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to top, var(--white) 0%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
 /* Content above the background */
 .hero .container {
   position: relative;
   z-index: 2;
+  will-change: transform, opacity;
 }
 
 .hero-content {
@@ -1056,7 +1074,7 @@ p { font-size: 1rem; line-height: 1.75; }
   .section { padding: 100px 0; }
   .section-sm { padding: 80px 0; }
 
-  .hero { padding: 120px 0 140px; min-height: 440px; }
+  .hero { padding: 80px 0 120px; min-height: calc(100vh - 120px); min-height: calc(100svh - 120px); }
 
   .grid-2, .contact-grid, .acquisition-grid, .section-header-split {
     grid-template-columns: 1fr;
@@ -1141,7 +1159,13 @@ p { font-size: 1rem; line-height: 1.75; }
   .nav-toggle.active span { background: var(--text-on-dark); }
 
   /* Layout */
-  .hero { padding: 80px 0 100px; min-height: 380px; }
+  .hero {
+    padding: 60px 0 100px;
+    /* Mobile: subtract top-bar (~56px) + nav (~53px) */
+    min-height: calc(100vh - 109px);
+    min-height: calc(100svh - 109px);
+  }
+  .hero::after { height: 100px; }
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-desc { font-size: 1rem; }
 
@@ -1184,4 +1208,6 @@ p { font-size: 1rem; line-height: 1.75; }
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-bg { inset: 0 !important; }
+  .hero .container { opacity: 1 !important; transform: none !important; }
 }

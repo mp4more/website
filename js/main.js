@@ -49,6 +49,54 @@
     });
   }
 
+  // Hero parallax scroll effect
+  // Background drifts up slowly, content fades + lifts as user scrolls
+  var hero = document.querySelector('.hero');
+  var heroBg = document.querySelector('.hero-bg');
+  var heroContainer = hero ? hero.querySelector('.container') : null;
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (hero && heroBg && heroContainer && !prefersReducedMotion) {
+    var ticking = false;
+
+    function heroParallax() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var heroHeight = hero.offsetHeight;
+
+      // Only animate while hero is in view
+      if (scrollY > heroHeight + 200) {
+        ticking = false;
+        return;
+      }
+
+      // Progress: 0 at top, 1 when hero scrolled out
+      var progress = Math.min(scrollY / heroHeight, 1);
+
+      // Background moves up at 40% of scroll speed (parallax)
+      var bgShift = scrollY * 0.4;
+      heroBg.style.transform = 'translate3d(0,' + bgShift + 'px,0)';
+
+      // Content fades out and drifts up
+      var contentShift = scrollY * 0.15;
+      var contentOpacity = 1 - progress * 1.2; // fades before fully scrolled
+      if (contentOpacity < 0) contentOpacity = 0;
+      heroContainer.style.transform = 'translate3d(0,-' + contentShift + 'px,0)';
+      heroContainer.style.opacity = contentOpacity;
+
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(heroParallax);
+      }
+    }, { passive: true });
+
+    // Run once on load in case page is already scrolled
+    heroParallax();
+  }
+
   // Scroll reveal (IntersectionObserver)
   var revealElements = document.querySelectorAll('.reveal');
 
