@@ -26,8 +26,8 @@
   --off-white: #F2F3F5;
   --cream: #EFEDE8;
   --warm-gray: #D6D8DB;
-  --mid-gray: #9B978F;
-  --dark-gray: #5C584F;
+  --mid-gray: #7A766E;
+  --dark-gray: #4A463E;
   --charcoal: #0f5f64;
   --black: #0a3639;
 
@@ -43,7 +43,7 @@
   --text-body: var(--dark-gray);
   --text-muted: var(--mid-gray);
   --text-on-dark: var(--off-white);
-  --text-on-dark-muted: rgba(242, 243, 245, 0.5);
+  --text-on-dark-muted: rgba(242, 243, 245, 0.7);
   --border: var(--warm-gray);
   --border-light: rgba(0, 0, 0, 0.08);
   --border-dark: rgba(255, 255, 255, 0.1);
@@ -298,7 +298,7 @@ p { font-size: 1rem; line-height: 1.75; }
 
 .hero .label {
   margin-bottom: 24px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .hero h1 {
@@ -308,7 +308,7 @@ p { font-size: 1rem; line-height: 1.75; }
 
 .hero-desc {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.8;
   max-width: 540px;
 }
@@ -723,7 +723,7 @@ p { font-size: 1rem; line-height: 1.75; }
   font-family: var(--serif);
   font-size: 2.5rem;
   font-weight: 400;
-  color: var(--cream);
+  color: var(--warm-gray);
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -811,7 +811,7 @@ p { font-size: 1rem; line-height: 1.75; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 4px;
 }
 
@@ -1034,7 +1034,7 @@ p { font-size: 1rem; line-height: 1.75; }
 
 .footer-bottom p {
   font-size: 0.6875rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.4);
   line-height: 1.6;
 }
 
