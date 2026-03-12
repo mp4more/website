@@ -3,20 +3,37 @@
    Clean · Editorial · Architectural
    ======================================== */
 
+/* Fonts from 4-more.com */
+@font-face {
+  font-family: 'Bangla MN';
+  src: url('../fonts/Bangla-MN.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bangla Sangam MN';
+  src: url('../fonts/Bangla-Sangam-MN.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* 4-more.com palette — clean, institutional */
   --white: #FFFFFF;
-  --off-white: #F7F6F4;
+  --off-white: #F2F3F5;
   --cream: #EFEDE8;
-  --warm-gray: #D4D0C8;
+  --warm-gray: #D6D8DB;
   --mid-gray: #9B978F;
   --dark-gray: #5C584F;
   --charcoal: #0f5f64;
-  --black: #0a4a4e;
+  --black: #0a3639;
 
   /* Accent — subtle, warm */
-  --accent: #8C7B5E;
-  --accent-light: #A89878;
+  --accent: #548184;
+  --accent-light: #548184;
 
   /* Semantic */
   --bg: var(--white);
@@ -26,14 +43,14 @@
   --text-body: var(--dark-gray);
   --text-muted: var(--mid-gray);
   --text-on-dark: var(--off-white);
-  --text-on-dark-muted: rgba(247, 246, 244, 0.5);
+  --text-on-dark-muted: rgba(242, 243, 245, 0.5);
   --border: var(--warm-gray);
   --border-light: rgba(0, 0, 0, 0.08);
   --border-dark: rgba(255, 255, 255, 0.1);
 
-  /* Fonts */
-  --serif: 'Libre Baskerville', 'Georgia', serif;
-  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Fonts — matching 4-more.com */
+  --serif: 'Bangla MN', 'Georgia', serif;
+  --sans: 'Bangla Sangam MN', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
