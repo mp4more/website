@@ -135,25 +135,11 @@ p { font-size: 1rem; line-height: 1.75; }
   display: inline-block;
 }
 
-.top-bar-logo img,
-.top-bar-logo svg {
+.top-bar-logo img {
   height: 28px;
   width: auto;
-}
-
-/* Text-based logo fallback */
-.top-bar-logo-text {
-  font-family: var(--sans);
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--text);
-  display: inline-block;
-}
-
-.top-bar-logo-text span {
-  font-weight: 300;
+  /* Logo is white on light bg — invert so it reads dark on white top-bar */
+  filter: invert(1);
 }
 
 /* ========== NAVIGATION ========== */
@@ -1003,16 +989,11 @@ p { font-size: 1rem; line-height: 1.75; }
   border-bottom: 1px solid var(--border-dark);
 }
 
-.footer-logo {
-  font-family: var(--sans);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--text-on-dark);
+.footer-logo img {
+  height: 22px;
+  width: auto;
+  /* White logo on dark footer — no inversion needed */
 }
-
-.footer-logo span { font-weight: 300; }
 
 .footer-nav {
   display: flex;
