@@ -844,31 +844,10 @@ p { font-size: 1rem; line-height: 1.75; }
   display: block;
 }
 
-.property-summary {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 40px;
-}
-
-.property-key-facts p {
+p.property-description {
   font-size: 0.9375rem;
   line-height: 1.8;
   color: var(--text-body);
-}
-
-.property-key-facts strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
-.property-description p {
-  font-size: 0.9375rem;
-  line-height: 1.8;
-  color: var(--text-body);
-}
-
-.property-description p + p {
-  margin-top: 12px;
 }
 
 /* Sidebar data sheet */
@@ -877,16 +856,6 @@ p { font-size: 1rem; line-height: 1.75; }
   padding-top: 24px;
   position: sticky;
   top: 80px;
-}
-
-.property-sidebar-title {
-  font-family: var(--sans);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text);
-  margin-bottom: 24px;
 }
 
 .property-data-sheet {
@@ -1255,11 +1224,6 @@ p { font-size: 1rem; line-height: 1.75; }
 
   .grid-3, .grid-4, .steps-row, .principles-grid {
     grid-template-columns: 1fr;
-  }
-
-  .property-summary {
-    grid-template-columns: 1fr;
-    gap: 24px;
   }
 
   .property-gallery-row {
