@@ -529,44 +529,32 @@ p { font-size: 1rem; line-height: 1.75; }
 .service-item h3 { margin-bottom: 10px; }
 .service-item p { font-size: 0.9375rem; line-height: 1.7; }
 
-/* ========== PRINCIPLES ========== */
-.principles-grid {
+/* ========== PRINCIPLES (row layout) ========== */
+.principles-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--border-dark);
 }
 
-.principle-item {
+.principle-card {
   background: var(--charcoal);
-  padding: 48px 32px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  padding: 40px 32px;
 }
 
-.principle-icon {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.principle-icon svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--accent-light);
-}
-
-.principle-item h4 {
+.principle-card h4 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   color: var(--text-on-dark);
+  margin-bottom: 8px;
   letter-spacing: 0;
+}
+
+.principle-card p {
+  font-size: 0.875rem;
+  color: var(--text-on-dark-muted);
+  line-height: 1.65;
 }
 
 /* ========== QUOTE / EDITORIAL BREAK ========== */
@@ -927,6 +915,114 @@ p.property-description {
   transform: scale(1.03);
 }
 
+/* ========== PORTFOLIO CAROUSEL ========== */
+.carousel {
+  position: relative;
+}
+
+.carousel-track {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.carousel-image {
+  overflow: hidden;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-info h3 {
+  margin-bottom: 24px;
+}
+
+.carousel-data {
+  margin: 0;
+}
+
+.carousel-data > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.carousel-data > div:first-child {
+  border-top: 1px solid var(--border-light);
+}
+
+.carousel-data dt {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.carousel-data dd {
+  font-size: 0.8125rem;
+  color: var(--text-body);
+  text-align: right;
+  margin: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.carousel-btn {
+  background: none;
+  border: 1px solid var(--border);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.carousel-btn:hover {
+  border-color: var(--charcoal);
+  background: var(--charcoal);
+  color: var(--white);
+}
+
+.carousel-counter {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  min-width: 48px;
+  text-align: center;
+}
+
 /* ========== ACQUISITION ========== */
 .acquisition-grid {
   display: grid;
@@ -1143,8 +1239,13 @@ p.property-description {
     position: static;
   }
 
-  .grid-4, .principles-grid, .steps-row, .team-grid {
+  .grid-4, .principles-row, .steps-row, .team-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .cta-strip-inner {
@@ -1227,7 +1328,7 @@ p.property-description {
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-desc { font-size: 1rem; }
 
-  .grid-3, .grid-4, .steps-row, .principles-grid {
+  .grid-3, .grid-4, .steps-row, .principles-row {
     grid-template-columns: 1fr;
   }
 
@@ -1271,7 +1372,7 @@ p.property-description {
   .section-header { margin-bottom: 36px; }
   .team-grid { grid-template-columns: 1fr; }
   .editorial-break blockquote { font-size: 1.0625rem; }
-  .principles-grid { gap: 0; }
+  .principles-row { gap: 0; }
   .principle-item { padding: 36px 20px; }
   .grid-3 > *, .grid-4 > * { padding: 36px 24px; }
 }

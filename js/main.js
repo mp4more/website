@@ -146,6 +146,26 @@
     });
   });
 
+  // Portfolio carousel
+  var carousel = document.getElementById('portfolioCarousel');
+  if (carousel) {
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var prevBtn = carousel.querySelector('.carousel-prev');
+    var nextBtn = carousel.querySelector('.carousel-next');
+    var counter = carousel.querySelector('.carousel-counter');
+    var current = 0;
+
+    function showSlide(index) {
+      slides[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      counter.textContent = (current + 1) + ' / ' + slides.length;
+    }
+
+    prevBtn.addEventListener('click', function () { showSlide(current - 1); });
+    nextBtn.addEventListener('click', function () { showSlide(current + 1); });
+  }
+
   // Current year
   document.querySelectorAll('.current-year').forEach(function (span) {
     span.textContent = new Date().getFullYear();
